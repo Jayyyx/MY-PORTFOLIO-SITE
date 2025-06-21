@@ -1,17 +1,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, Pickaxe } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 
-const strongSkills = {
-    "Languages": ["HTML", "CSS", "PHP", "Java", "JavaScript"],
-    "Frameworks": ["React", "React Native"],
+const skills = {
+    "Languages": ["HTML", "CSS", "PHP", "Java", "JavaScript", "Python", "C++", "C#"],
+    "Frameworks": ["React", "React Native", "Flutter", "Windows Forms"],
     "Databases": ["SQL"],
     "Libraries & Tools": ["React Router", "SQL Workbench"]
-};
-
-const weakSkills = {
-    "Languages": ["Python", "C++", "C#"],
-    "Frameworks": ["Flutter", "Windows Forms"]
 };
 
 const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) => (
@@ -31,34 +26,20 @@ export default function SkillsSection() {
                     <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-accent-foreground font-medium">Skills</div>
                     <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">My Technical Toolbox</h2>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        A look at the technologies I work with. I'm confident with my strong stack and always eager to improve on the rest.
+                        A look at the various technologies I've worked with. I'm always eager to learn more and expand my skillset.
                     </p>
                 </div>
-                <div className="grid gap-8 md:grid-cols-2">
+                <div className="max-w-4xl mx-auto">
                     <Card className="shadow-lg hover:shadow-xl transition-shadow">
                         <CardHeader className="flex flex-row items-center gap-4">
                             <Lightbulb className="w-10 h-10 text-primary" />
                             <div>
-                                <CardTitle className="font-headline text-2xl">Strong Stack</CardTitle>
-                                <p className="text-sm text-foreground/70">My go-to technologies for building applications.</p>
+                                <CardTitle className="font-headline text-2xl">My Tech Stack</CardTitle>
+                                <p className="text-sm text-foreground/70">The languages, frameworks, and tools I use to build applications.</p>
                             </div>
                         </CardHeader>
                         <CardContent className="grid gap-6 pt-2">
-                           {Object.entries(strongSkills).map(([category, skills]) => (
-                               <SkillCategory key={category} title={category} skills={skills} />
-                           ))}
-                        </CardContent>
-                    </Card>
-                    <Card className="shadow-lg hover:shadow-xl transition-shadow">
-                        <CardHeader className="flex flex-row items-center gap-4">
-                            <Pickaxe className="w-10 h-10 text-primary" />
-                             <div>
-                                <CardTitle className="font-headline text-2xl">Weak Stack</CardTitle>
-                                <p className="text-sm text-foreground/70">Areas I'm currently working to improve.</p>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="grid gap-6 pt-2">
-                            {Object.entries(weakSkills).map(([category, skills]) => (
+                           {Object.entries(skills).map(([category, skills]) => (
                                <SkillCategory key={category} title={category} skills={skills} />
                            ))}
                         </CardContent>
