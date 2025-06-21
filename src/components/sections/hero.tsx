@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Phone, MessageSquare } from "lucide-react";
+import { Download, Github, Mail, Phone, MessageSquare } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function HeroSection() {
@@ -19,6 +19,11 @@ export default function HeroSection() {
           </p>
           <div className="flex justify-center md:justify-start gap-4 flex-wrap">
             <Button asChild size="lg">
+              <a href="/Lavoe-Kwaku-Jeremiah-CV.pdf" download>
+                <Download className="mr-2 h-5 w-5" /> Download CV
+              </a>
+            </Button>
+            <Button asChild variant="secondary" size="lg">
               <a href="mailto:lavoejeremiah63@gmail.com">
                 <Mail className="mr-2 h-5 w-5" /> Email Me
               </a>
