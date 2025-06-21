@@ -3,36 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    description: "The very website you are on. Built with Next.js, Tailwind CSS, and ShadCN UI for a clean, modern, and responsive design.",
-    image: "https://placehold.co/600x400.png",
-    github: "https://github.com/Jayyyx/portfolio-v1",
-    live: "#",
-    tags: ["Next.js", "React", "Tailwind CSS"],
-    aiHint: "website portfolio"
-  },
-  {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce site with product listings, shopping cart, and checkout functionalities. Powered by React and a PHP backend.",
-    image: "https://placehold.co/600x400.png",
-    github: "https://github.com/Jayyyx/",
-    live: "",
-    tags: ["React", "PHP", "SQL", "E-commerce"],
-    aiHint: "online store"
-  },
-  {
-    title: "Mobile Task Manager",
-    description: "A cross-platform task management application built with React Native. Helps users organize their daily tasks and stay productive.",
-    image: "https://placehold.co/600x400.png",
-    github: "https://github.com/Jayyyx/",
-    live: "",
-    tags: ["React Native", "JavaScript", "Mobile App"],
-    aiHint: "mobile app"
-  },
-];
+import { projects } from "@/lib/data";
 
 export default function ProjectsSection() {
   return (

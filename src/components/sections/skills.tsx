@@ -1,56 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, Code, Framer, Smartphone, AppWindow, Database, Library, Cpu, Braces } from "lucide-react";
+import { Lightbulb } from "lucide-react";
+import { skills } from "@/lib/data";
 
-const skills = {
-    "Languages": ["HTML", "CSS", "PHP", "Java", "JavaScript", "Python", "C++", "C#"],
-    "Frameworks": ["React", "React Native", "Flutter", "Windows Forms"],
-    "Databases": ["SQL", "Supabase", "PostgreSQL", "MongoDB"],
-    "Libraries & Tools": ["React Router", "SQL Workbench"]
-};
-
-const getIconForSkill = (skill: string) => {
-    const iconProps = { className: "h-5 w-5" };
-    switch (skill.toLowerCase()) {
-        case 'html':
-        case 'css':
-        case 'javascript':
-            return <Code {...iconProps} />;
-        case 'php':
-        case 'java':
-        case 'python':
-        case 'c++':
-        case 'c#':
-            return <Braces {...iconProps} />;
-        case 'react':
-            return <Framer {...iconProps} />;
-        case 'react native':
-        case 'flutter':
-            return <Smartphone {...iconProps} />;
-        case 'windows forms':
-            return <AppWindow {...iconProps} />;
-        case 'sql':
-        case 'postgresql':
-        case 'mongodb':
-        case 'sql workbench':
-            return <Database {...iconProps} />;
-        case 'supabase':
-            return <Cpu {...iconProps} />;
-        case 'react router':
-            return <Library {...iconProps} />;
-        default:
-            return null;
-    }
-}
-
-const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) => (
+const SkillCategory = ({ title, skills }: { title: string; skills: {name: string, icon: React.ElementType}[] }) => (
     <div>
         <h4 className="font-semibold mb-2 text-foreground/80">{title}</h4>
         <div className="flex flex-wrap gap-2">
             {skills.map(skill => (
-                <Badge key={skill} variant="secondary" className="text-base py-2 px-4 flex items-center gap-3">
-                    {getIconForSkill(skill)}
-                    <span>{skill}</span>
+                <Badge key={skill.name} variant="secondary" className="text-base py-2 px-4 flex items-center gap-3">
+                    <skill.icon className="h-5 w-5" />
+                    <span>{skill.name}</span>
                 </Badge>
             ))}
         </div>
@@ -78,8 +38,8 @@ export default function SkillsSection() {
                             </div>
                         </CardHeader>
                         <CardContent className="grid gap-6 pt-2">
-                           {Object.entries(skills).map(([category, skills]) => (
-                               <SkillCategory key={category} title={category} skills={skills} />
+                           {Object.entries(skills).map(([category, skillList]) => (
+                               <SkillCategory key={category} title={category} skills={skillList} />
                            ))}
                         </CardContent>
                     </Card>
