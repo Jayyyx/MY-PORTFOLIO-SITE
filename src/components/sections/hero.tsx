@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Github, Mail, Phone, MessageSquare } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function HeroSection() {
@@ -34,13 +34,8 @@ export default function HeroSection() {
               </a>
             </Button>
              <Button asChild variant="secondary" size="lg">
-              <a href="tel:0538103772">
-                <Phone className="mr-2 h-5 w-5" /> Call Me
-              </a>
-            </Button>
-             <Button asChild variant="secondary" size="lg">
-              <a href="https://wa.me/233262765223" target="_blank" rel="noopener noreferrer">
-                <MessageSquare className="mr-2 h-5 w-5" /> WhatsApp
+              <a href="https://www.linkedin.com/in/jeremiah-lavoe-606785275/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
               </a>
             </Button>
           </div>

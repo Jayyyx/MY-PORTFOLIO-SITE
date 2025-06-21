@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Phone, MessageSquare, MapPin } from "lucide-react";
+import { Github, Mail, Linkedin, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const contactDetails = [
   { icon: Mail, text: "lavoejeremiah63@gmail.com", href: "mailto:lavoejeremiah63@gmail.com" },
-  { icon: Phone, text: "0538103772", href: "tel:0538103772" },
-  { icon: MessageSquare, text: "0262765223 (WhatsApp)", href: "https://wa.me/233262765223" },
+  { icon: Linkedin, text: "Jeremiah Lavoe", href: "https://www.linkedin.com/in/jeremiah-lavoe-606785275/" },
   { icon: Github, text: "Jayyyx", href: "https://github.com/Jayyyx" },
   { icon: MapPin, text: "Accra, Ghana", href: "https://www.google.com/maps/place/Accra" }
 ];
