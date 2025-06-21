@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="container mx-auto flex min-h-[calc(100vh-5rem)] items-center px-4 py-20 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="flex flex-col gap-6 text-center md:text-left">
+        <div className="flex flex-col gap-6 text-center md:text-left opacity-0 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <p className="font-headline text-lg font-medium text-primary">Hi, my name is</p>
           <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter">
             Lavoe Kwaku Jeremiah.
@@ -40,7 +40,7 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <Avatar className="h-64 w-64 md:h-96 md:w-96 border-4 border-primary/20 shadow-xl">
                 <AvatarImage src="https://placehold.co/400x400.png" alt="Lavoe Kwaku Jeremiah" data-ai-hint="male portrait" />
                 <AvatarFallback>LKJ</AvatarFallback>

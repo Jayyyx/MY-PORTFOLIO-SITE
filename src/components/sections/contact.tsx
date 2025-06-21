@@ -11,16 +11,16 @@ const contactDetails = [
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center opacity-0 animate-fade-in-up">
                     <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-accent-foreground font-medium">Contact</div>
                     <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Get In Touch</h2>
                     <p className="max-w-[600px] text-foreground/70 md:text-xl/relaxed">
                         My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
                 </div>
-                <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
+                <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                     {contactDetails.map((detail, index) => (
                         <a key={index} href={detail.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 justify-center sm:justify-start group">
                             <div className="bg-primary/10 p-3 rounded-full transition-colors group-hover:bg-primary/20">
@@ -32,7 +32,7 @@ export default function ContactSection() {
                         </a>
                     ))}
                 </div>
-                <div className="flex justify-center mt-12">
+                <div className="flex justify-center mt-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
                      <Button asChild size="lg" className="text-lg">
                         <a href="mailto:lavoejeremiah63@gmail.com">
                             Say Hello

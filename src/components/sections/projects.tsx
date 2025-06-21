@@ -36,9 +36,9 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 opacity-0 animate-fade-in-up">
             <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-accent-foreground font-medium">Projects</div>
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Some Things I've Built</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-card">
+            <Card key={index} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-card opacity-0 animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 200}ms` }}>
               <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-auto aspect-video object-cover" data-ai-hint={project.aiHint} />
               <CardHeader>
                 <CardTitle className="font-headline">{project.title}</CardTitle>
