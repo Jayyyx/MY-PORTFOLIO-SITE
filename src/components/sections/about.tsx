@@ -28,9 +28,9 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-accent-foreground font-medium">About Me</div>
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">My Journey So Far</h2>
+            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Crafting Digital Experiences</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From high school to university and into the professional world, here's a look at my educational and professional path.
+                I specialize in creating modern, responsive web applications and robust website designs that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment. I thrive on turning complex problems into elegant, user-friendly solutions, always pushing the boundaries of what's possible on the web.
             </p>
         </div>
         <div className="grid gap-10 md:grid-cols-2">
