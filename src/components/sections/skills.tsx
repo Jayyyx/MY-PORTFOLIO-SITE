@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Code, Framer, Smartphone, AppWindow, Database, Library, Cpu, Braces } from "lucide-react";
 
 const skills = {
     "Languages": ["HTML", "CSS", "PHP", "Java", "JavaScript", "Python", "C++", "C#"],
@@ -9,11 +9,50 @@ const skills = {
     "Libraries & Tools": ["React Router", "SQL Workbench"]
 };
 
+const getIconForSkill = (skill: string) => {
+    const iconProps = { className: "h-5 w-5" };
+    switch (skill.toLowerCase()) {
+        case 'html':
+        case 'css':
+        case 'javascript':
+            return <Code {...iconProps} />;
+        case 'php':
+        case 'java':
+        case 'python':
+        case 'c++':
+        case 'c#':
+            return <Braces {...iconProps} />;
+        case 'react':
+            return <Framer {...iconProps} />;
+        case 'react native':
+        case 'flutter':
+            return <Smartphone {...iconProps} />;
+        case 'windows forms':
+            return <AppWindow {...iconProps} />;
+        case 'sql':
+        case 'postgresql':
+        case 'mongodb':
+        case 'sql workbench':
+            return <Database {...iconProps} />;
+        case 'supabase':
+            return <Cpu {...iconProps} />;
+        case 'react router':
+            return <Library {...iconProps} />;
+        default:
+            return null;
+    }
+}
+
 const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) => (
     <div>
         <h4 className="font-semibold mb-2 text-foreground/80">{title}</h4>
         <div className="flex flex-wrap gap-2">
-            {skills.map(skill => <Badge key={skill} variant="secondary" className="text-base py-1 px-3">{skill}</Badge>)}
+            {skills.map(skill => (
+                <Badge key={skill} variant="secondary" className="text-base py-2 px-4 flex items-center gap-3">
+                    {getIconForSkill(skill)}
+                    <span>{skill}</span>
+                </Badge>
+            ))}
         </div>
     </div>
 );
