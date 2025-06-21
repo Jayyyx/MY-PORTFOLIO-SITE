@@ -5,7 +5,7 @@ import { Lightbulb } from "lucide-react";
 const skills = {
     "Languages": ["HTML", "CSS", "PHP", "Java", "JavaScript", "Python", "C++", "C#"],
     "Frameworks": ["React", "React Native", "Flutter", "Windows Forms"],
-    "Databases": ["SQL"],
+    "Databases": ["SQL", "Supabase", "PostgreSQL", "MongoDB"],
     "Libraries & Tools": ["React Router", "SQL Workbench"]
 };
 
