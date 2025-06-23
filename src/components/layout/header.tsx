@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Rocket, Sun, Moon } from "lucide-react";
+import { Menu, Rocket, Sun, Moon, Mail } from "lucide-react";
 import { HireMeButton } from "../hire-me-button";
 
 const navLinks = [
@@ -52,16 +52,16 @@ export default function Header() {
 
   const ThemeToggleButton = () => {
     if (!mounted) {
-      return <div className="h-10 w-10" />
+      return <Button variant="outline" size="icon" className="h-10 w-10" disabled />;
     }
     return (
-      <Button onClick={toggleTheme} variant="outline" size="icon" className="h-10 w-10">
+      <Button onClick={toggleTheme} variant="outline" size="icon" className="relative h-10 w-10 overflow-hidden">
         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </Button>
-    )
-  }
+    );
+  };
 
   return (
     <header
@@ -86,6 +86,10 @@ export default function Header() {
             <ThemeToggleButton />
         </div>
         <div className="flex md:hidden items-center gap-2">
+            <HireMeButton variant="outline" size="icon">
+                <Mail className="h-5 w-5"/>
+                <span className="sr-only">Hire Me</span>
+            </HireMeButton>
             <ThemeToggleButton />
             <Sheet>
                 <SheetTrigger asChild>
