@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { HireMeButton } from "../hire-me-button";
 
 export default function HeroSection() {
   return (
@@ -23,11 +24,9 @@ export default function HeroSection() {
                 <Download className="mr-2 h-5 w-5" /> Download CV
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg">
-              <a href="mailto:lavoejeremiah63@gmail.com">
-                <Mail className="mr-2 h-5 w-5" /> Email Me
-              </a>
-            </Button>
+            <HireMeButton variant="secondary" size="lg">
+              <Mail className="mr-2 h-5 w-5" /> Hire Me
+            </HireMeButton>
             <Button asChild variant="secondary" size="lg">
               <a href="https://github.com/Jayyyx" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" /> GitHub

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Github, Mail, Linkedin, MapPin } from "lucide-react";
 import Link from "next/link";
+import { HireMeButton } from "../hire-me-button";
 
 const contactDetails = [
   { icon: Mail, text: "lavoejeremiah63@gmail.com", href: "mailto:lavoejeremiah63@gmail.com" },
@@ -33,11 +33,9 @@ export default function ContactSection() {
                     ))}
                 </div>
                 <div className="flex justify-center mt-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                     <Button asChild size="lg" className="text-lg">
-                        <a href="mailto:lavoejeremiah63@gmail.com">
-                            Say Hello
-                        </a>
-                    </Button>
+                     <HireMeButton size="lg" className="text-lg">
+                        Say Hello
+                    </HireMeButton>
                 </div>
             </div>
         </section>

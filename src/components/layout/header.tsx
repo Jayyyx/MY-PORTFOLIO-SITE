@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Rocket, Sun, Moon } from "lucide-react";
+import { HireMeButton } from "../hire-me-button";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -83,6 +83,7 @@ export default function Header() {
               ))}
             </nav>
             <ThemeToggleButton />
+            <HireMeButton />
         </div>
         <div className="flex md:hidden items-center gap-2">
             <ThemeToggleButton />
@@ -106,6 +107,7 @@ export default function Header() {
                         </Link>
                     ))}
                     </nav>
+                    <HireMeButton className="mt-4" />
                 </div>
                 </SheetContent>
             </Sheet>
