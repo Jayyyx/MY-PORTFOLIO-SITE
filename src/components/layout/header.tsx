@@ -82,8 +82,8 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <ThemeToggleButton />
             <HireMeButton />
+            <ThemeToggleButton />
         </div>
         <div className="flex md:hidden items-center gap-2">
             <ThemeToggleButton />
