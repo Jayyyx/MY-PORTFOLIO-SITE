@@ -42,7 +42,7 @@ export default function HeroSection() {
         </div>
         <div className="flex justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <Avatar className="h-64 w-64 md:h-96 md:w-96 border-4 border-primary/20 shadow-xl">
-                <AvatarImage src="src\app\images\jayy.jpg" alt="Lavoe Kwaku Jeremiah" data-ai-hint="male portrait" />
+                <AvatarImage src="/images/jayy.jpg" alt="Lavoe Kwaku Jeremiah" data-ai-hint="male portrait" />
                 <AvatarFallback>LKJ</AvatarFallback>
             </Avatar>
         </div>
